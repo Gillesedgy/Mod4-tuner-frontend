@@ -1,7 +1,14 @@
-import React from 'react'
-
+import { Link } from "react-router-dom";
+import './nav.css'
 export default function Nav() {
   return (
-    <div>Nav GOES HERE</div>
-  )
+    <nav>
+      <h1>
+        <Link to="/songs">Tunner</Link>
+      </h1>
+      <button className="Nav-Button">
+        <Link to="/songs/new"> New Song</Link>
+      </button>
+    </nav>
+  );
 }

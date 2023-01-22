@@ -1,0 +1,27 @@
+.Show-Table {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Show-button {
+  display: flex;
+  justify-content: space-around;
+ margin: 3px;
+ padding: 10px;
+}
+
+.showNav a {
+  color: rgb(16, 189, 223);
+  text-decoration: none;
+}
+.showNav {
+  background: rgb(195, 94, 34);
+  background: linear-gradient(
+    0deg,
+    rgba(195, 94, 34, 1) 0%,
+    rgba(253, 45, 62, 1) 100%
+  );
+
+  padding: 3px;
+ 
+}

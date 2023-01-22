@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
+import Wave from './Pages/Wave'
 import Edit from "./Pages/Edit";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
@@ -15,7 +16,9 @@ import Nav from "./Components/Nav";
 function App() {
   return (
     <div className="App">
+  
       <Router>
+        <Wave/>
         <Nav />
         <main>
           <Routes>

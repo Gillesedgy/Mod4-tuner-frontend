@@ -1,0 +1,34 @@
+.Songs-Table, table {
+  width: 80%;
+  border-spacing: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center;
+}
+td a {
+  text-decoration: none;
+  color: black;
+}
+
+.favorite {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color:rgb(221, 69, 13);
+  text-shadow: 1.8px 0.5px #090909;
+}
+
+.Songs-Table:hover {
+  border: 1px solid rgb(195, 94, 34);
+  padding: 0.5rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
