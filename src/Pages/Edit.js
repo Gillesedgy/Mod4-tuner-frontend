@@ -1,10 +1,11 @@
-import SongEditForm from "../Components/SongEditForm";
+import AlbumEditForm from "../Components/AlbumEditForm";
 
 export default function Edit() {
   return (
     <div className="New Edit">
       <h2>Edit</h2>
-      <SongEditForm/>
+      {/* <SongEditForm/> */}
+      <AlbumEditForm/>
     </div>
   );
 }

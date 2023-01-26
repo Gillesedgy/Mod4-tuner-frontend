@@ -1,20 +1,18 @@
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-export default function Song({ song }) {
+export default function Song({
+  song: { id, artist, time, is_favorite, name },
+}) {
   let navigate = useNavigate();
   return (
     <tr
       onClick={() => {
-        navigate(`/songs/${song.id}`);
+        navigate(`/songs/${id}`);
       }}
     >
-     
-      <td className="Songs-Table">
-       {song.name}
-      </td>
-      <td className="Songs-Table" >{song.artist}</td>
-      <td className="Songs-Table">{song.time}</td>
-      <td className="favorite Songs-Table">{song.is_favorite ? "👍" : "👎"}</td>
+      <td className="Songs-Table">{name}</td>
+      <td className="Songs-Table">{artist}</td>
+      <td className="Songs-Table">{time}</td>
+      <td className="favorite Songs-Table">{is_favorite ? "👍" : "👎"}</td>
     </tr>
   );
 }
