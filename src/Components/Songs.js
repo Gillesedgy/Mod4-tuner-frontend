@@ -1,17 +1,30 @@
 import axios from "axios";
 import Song from "./Song";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import './songs.css'
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function Songs() {
   const [songs, setSongs] = useState([]);
+  //! 
+  const {id} = useParams()
 
-  // AXIOS
+  //  TODO: AXIOS -- adding the new data from songs 
+const handleAddSongs =(newSongs)=>{
+  axios.post(`${API}/albums/${id}/songs`, newSongs).then((response)=>{
+    setSongs([response.data, ...songs])
+  }, (error)=> console.log(error)).catch((err)=> console.warn(err))
+}
+
+// handle submit
+
+
+
   useEffect(() => {
     axios
-      .get(`${API}/albums`)
+      .get(`${API}/albums/${id}/songs`)
       .then((res) => {
         console.log(res.data);
         setSongs(res.data);
@@ -19,11 +32,12 @@ export default function Songs() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="Songs">
       <section>
+        <h2>Songs</h2>
         <table >
           <thead>
             <tr>

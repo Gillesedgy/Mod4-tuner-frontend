@@ -2,6 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "./songDetails.css";
+//!
+import Songs from "../Components/Songs";
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function AlbumDetails() {
@@ -42,11 +45,15 @@ export default function AlbumDetails() {
   return (
     <>
       <table className="Show-Table">
-        <th>Title</th>
+        <thead>
+          <tr></tr>
+          <th>Title</th>
         <th>Released Year</th>
         <th>Length</th>
         <th>Genre</th>
         {/* <th>Favorite</th> */}
+        </thead>
+        
         <tr>
           <td>{album.title}</td>
           <td>{album.released_year}</td>
@@ -70,6 +77,8 @@ export default function AlbumDetails() {
           <button className="showNav" onClick={handleDelete}>
             Delete
           </button>
+          {/* //TODO: add the songs component  */}
+          <Songs />
         </div>
       </div>
     </>
