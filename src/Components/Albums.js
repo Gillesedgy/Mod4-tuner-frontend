@@ -41,9 +41,7 @@ export default function Albums() {
           </tbody>
         </table>
       </section>
-        <button></button>
-        <button></button>
-        <button></button>
+     
     </div>
   );
 }
